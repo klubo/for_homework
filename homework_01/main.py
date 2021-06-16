@@ -9,6 +9,10 @@ def power_numbers(num):
 nums = (power_numbers(i) for i in range(5))
 print(list(nums))
 
+ODD = "odd"
+EVEN = "even"
+PRIME = "prime"
+
 
 def filter_numbers(numbers):
     num_list = []
