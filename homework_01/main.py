@@ -2,31 +2,29 @@
 Домашнее задание №1
 Функции и структуры данных
 """
+def power_numbers(num):
+    print('num', num)
+    return num ** 2
+
+nums = (power_numbers(i) for i in range(5))
+print(list(nums))
 
 
-def power_numbers():
-    """
-    функция, которая принимает N целых чисел,
-    и возвращает список квадратов этих чисел
-    >>> power_numbers(1, 2, 5, 7)
-    <<< [1, 4, 25, 49]
-    """
+def filter_numbers(numbers):
+    num_list = []
+    for num in numbers:
+        if num % 2 != 0:
+            num_list.append(num)
+    return num_list
+odds = filter_numbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+print(odds)
 
+def filter_numbers(numbers):
+    num_list = []
+    for num in numbers:
+        if num % 2 == 0:
+            num_list.append(num)
+    return num_list
+even = filter_numbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+print(even)
 
-# filter types
-ODD = "odd"
-EVEN = "even"
-PRIME = "prime"
-
-
-def filter_numbers():
-    """
-    функция, которая на вход принимает список из целых чисел,
-    и возвращает только чётные/нечётные/простые числа
-    (выбор производится передачей дополнительного аргумента)
-
-    >>> filter_numbers([1, 2, 3], ODD)
-    <<< [1, 3]
-    >>> filter_numbers([2, 3, 4, 5], EVEN)
-    <<< [2, 4]
-    """
